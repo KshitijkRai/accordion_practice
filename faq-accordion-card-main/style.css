@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, #AB68EB 0%, #7564E8 100%) no-repeat;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0;
+}
+
+#faq-main {
+    position: relative;
+}
+
+.faq-card {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    border-radius: 20px;
+    height: 600px;
+    align-items: center;
+    box-shadow: 0px 0px 20px 6px #826491;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-img img.mobile-img  {
+    display: none;
+}
+
+.faq-img img.woman {
+    position: absolute;
+    right: 62%;
+    top: 16%;
+}
+
+.faq-img img.box {
+    position: absolute;
+    right: 88%;
+    top: 40%;
+} 
+
+.faq-img img.pattern {
+    position: absolute;
+    bottom: -14%;
+    right: 62%;
+} 
+
+div#faq-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+}
+
+.faq h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding-bottom: 1rem;
+}
+
+.faq .faq-content label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    color: #5f5f5f;
+}
+
+.faq .faq-content label + input[type='radio'] {
+    display: none;
+}
+
+.faq .faq-content label + input[type='radio']:checked + p {
+    max-height: 300px;
+}
+
+.faq .faq-content label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    color: #5f5f5f;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq {
+    padding: 10px;
+    width: 400px;
+    z-index: 2;
+}
+
+.faq-content {
+    border-bottom: 2px solid #efefef;
+    padding: 10px 0;
+}
+
+.faq-content p {
+    font-size: 15px;
+    color: #a29494;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    line-height: 24px;
+    margin: 12px 0;
+}
+
+
+@media (max-width:950px) {
+    .faq {
+        box-shadow: 0 0 20px 0px grey;
+        border-radius: 8px;
+        padding: 20px;
+        background: #ffffff;
+    }
+
+}
+
+
+@media (max-width:600px) {
+    .faq-card {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .faq {
+        box-shadow: none;
+        width: auto;
+        height: auto;
+        overflow: scroll;
+    }
+
+    .faq h1 {
+        text-align: center;
+    }
+
+    .faq-img img {
+        display: none;
+    }
+
+    .faq-img img.mobile-img  {
+        display: block;
+    }
+    
+}
